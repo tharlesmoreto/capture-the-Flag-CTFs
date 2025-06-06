@@ -1,7 +1,7 @@
 
 ---
 
-# 🛡️ Template Injection do Desafio no site Chapéu de Palha Hacker
+# 🛡️ Desafio de Template Injection no site Chapéu de Palha Hacker
 
 > *"Esses gatos escondem algo... Descubra o que é!"*
 
