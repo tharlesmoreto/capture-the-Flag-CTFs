@@ -1,4 +1,3 @@
-Opa! Claro, consigo formatar isso de um jeito que fique ainda mais legível e profissional em Markdown, mantendo todo o conteúdo original.
 
 ---
 
