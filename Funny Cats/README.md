@@ -147,7 +147,7 @@ Com a flag localizada, bastava ler seu conteúdo. 📖✨
 A flag foi exibida diretamente no comentário HTML:
 
 ```
-<!-- CTF{SUA_FLAG_AQUI} -->
+<!-- flag{w3_l0v3_c4t5} -->
 ```
 
 🏁 **Flag capturada com sucesso!** 🎊🐾
