@@ -83,7 +83,7 @@ O resultado refletido foi:
 ```
 
 ✅ **Vulnerabilidade confirmada!**
-A aplicação estava vulnerável a **Template Injection**, e a sintaxe indicava que o ambientes Node.js. 🐾🔥
+A aplicação estava vulnerável a **Template Injection**, e a sintaxe indicava que o ambiente era em Node.js. 🐾🔥
 
 ---
 
