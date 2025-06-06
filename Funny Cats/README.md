@@ -1,17 +1,17 @@
 ````markdown
 # 🛡️ Write-up CTF: Template Injection do Chapéu de Palha Hacker
 
-> *"Esses gatos escondem algo... Descubra o que é!"* 😼🔍
+> *"Esses gatos escondem algo... Descubra o que é!"*
+---
 
-## 📌🎯 Contexto Rápido
+## 📌 Contexto Rápido
 
 | Item                    | Detalhe                                                                 |
 |-------------------------|-------------------------------------------------------------------------|
-| 🎯 Nome do Desafio       | **Funny Cats** 🐱                                                    |
-| 🔎 Objetivo:                  | **Template Injection (EJS)** 📜🚨                                       |
-| 🌐 Link de Acesso:         | [funny-cats.chapeudepalhahacker.club](https://funny-cats.chapeudepalhahacker.club/) 🐈‍⬛🌐 |
-| 📁 Dica:                 | A flag se encontra em /flag.txt. Pegue para pontuar. 🕵️‍♂️✨|
-
+| 🎯 Nome do Desafio       | **Funny Cats**                                                         |
+| 📍 Local da Flag         | `/flag.txt`                                                            |
+| 🌐 URL                  | [https://funny-cats.chapeudepalhahacker.club/](https://funny-cats.chapeudepalhahacker.club/) |
+| 💡 Observação Inicial    | A flag se encontra em `/flag.txt`. Pegue para pontuar.        |
 
 ---
 
