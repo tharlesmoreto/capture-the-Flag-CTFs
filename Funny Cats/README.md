@@ -1,7 +1,7 @@
 
 ---
 
-# 🛡️ Write-up CTF: Template Injection do Chapéu de Palha Hacker
+# 🛡️ Template Injection do Desafio no site Chapéu de Palha Hacker
 
 > *"Esses gatos escondem algo... Descubra o que é!"*
 
